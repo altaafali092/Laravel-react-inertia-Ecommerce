@@ -5,7 +5,8 @@ import { Input } from "@/components/ui/input"
 
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Link } from "@inertiajs/react"
-import { ToggleLeft, ToggleRight } from "lucide-react"
+import { ShoppingCart, ToggleLeft, ToggleRight } from "lucide-react"
+import { Toggle } from "@radix-ui/react-toggle"
 
 export default function Navbar() {
     return (
@@ -69,9 +70,11 @@ export default function Navbar() {
                                 </div>
                             </DropdownMenuContent>
                         </DropdownMenu>
-                        {/* <ToggleRight aria-label="Toggle dark mode" className="rounded-full"> */}
-                        <MoonIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-                        {/* </ToggleRight> */}
+                        <ShoppingCart className="h-5 w-5 text-gray-500 dark:text-gray-400" />
+                        <Toggle aria-label="Toggle dark mode" className="rounded-full">
+                            <MoonIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
+                        </Toggle>
+
                         <Sheet>
                             <SheetTrigger asChild>
                                 <Button variant="ghost" size="icon" className="rounded-full md:hidden">

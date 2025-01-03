@@ -12,7 +12,7 @@ const images = [
 
 const Slider = () => {
   return (
-    <Carousel className="w-full h-screen relative">
+    <Carousel className="w-full  relative">
       <CarouselContent>
         {images.map((image, index) => (
           <CarouselItem key={index}>
